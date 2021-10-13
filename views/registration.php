@@ -27,6 +27,8 @@ $db = new Database();
     />
     <title>Pharmacist Login</title>
     <link rel="icon" href="./images/hms.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header class="header-area">
@@ -116,43 +118,43 @@ $db = new Database();
 }
 
 ?>
-
-  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+<div class="container">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     <!-- <fieldset>
       <legend>Register</legend> -->
 
       <label for="username">User Name:</label>
-      <input type="text" name="username" id="username" >
+      <input type="text" name="username"  class="form-control col-md-6" id="username" >
        <span style="color: red;">  <?php echo  $usernameErr;?></span>
-      <br><br>
-
       <label for="password">Password:</label>
-      <input type="password" name="password" id="password">
+      <input type="password" name="password" class="form-control col-md-6" id="password">
        <span style="color: red;">  <?php echo  $passwordErr;?></span>
-      <br><br>
+     
       <label for="email">Email</label>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" class="form-control col-md-6" id="email">
       <span style="color: red;">  <?php echo  $emailErr;?></span>
-      <br><br>
+   
       <label for="address">Address</label>
-      <input type="text" name="address" id="address">
+      <input type="text" name="address" class="form-control col-md-6" id="address">
       <span style="color: red;">  <?php echo  $addressErr;?></span>
-      <br><br>
+     
       <label for="phone">Phone</label>
-      <input type="text" name="phone" id="phone">
+      <input type="text" name="phone" class="form-control col-md-6" id="phone">
       <span style="color: red;">  <?php echo  $phoneErr;?></span>
-      <br><br>
+      <br>
       <label for="gender">Gender</label>
       <input type="radio" name="gender" value="Male" id="gender">Male
       <input type="radio" name="gender" value="Female" id="gender">Female
       <span style="color: red;">  <?php echo  $genderErr;?></span>
       <br>
-      <input type="submit" name="submit" value="Register">
+      <input type="submit" name="submit" class="btn btn-success" value="Register">
   </form>
   <br>
    <p style="color:green" > <?php echo  $successfulMessage;?></p>
   <p style="color: red" > <?php echo  $errorMessage;?>   </p>
   <br>
   <a href="./pharmacist-login.php">Click to login</a>
+</div>
+
 </body>
 </html>

@@ -15,8 +15,9 @@ echo $mysqli->connect_error;
 	$result = $mysqli->query($sql);
 	if(!$result){
 		echo "Query Failed. ".$mysqli->error;
-	} else {
-		echo "Successfully Inserted. ".$mysqli->affected_rows." Records";
 	}
+	 //else {
+	// 	echo "Successfully Inserted. ".$mysqli->affected_rows." Records";
+	// }
 }}
 ?>

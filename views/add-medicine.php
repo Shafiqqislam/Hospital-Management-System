@@ -12,7 +12,7 @@
     $create = $db->addMedicine($_POST,"medicine");
       if($create)
       {
-        echo "<script>alert('Medicine Added succesfully');</script>";
+        echo "<script>alert('Medicine Added successfully');</script>";
         echo "<script>window.location.href = './show-medicine.php';</script>";
       }
     }
